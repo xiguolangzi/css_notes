@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  1.块级模块*/
+        div {
+            width: 300px;
+            height: 30px;
+            background-color: pink;
+        }
+
+        /* 2.行内元素 */
+        span {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+
+        /*  3.行内块  */
+        img {
+            width: 400px;
+        }
+
+
+        /* 4.显示模式转换 display */
+        /* 
+        display: block          转成块
+        display: inline-block   转成行内块
+        display: inline         转成行内
+        */
+        span.bg {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.块级模块 -->
+    <div>独占一行</div>
+    <div>宽度和父级一样</div>
+    <div>用于换行，即使设置宽度，依然独占一行</div>
+
+    <!-- 2.行内元素 -->
+    <span>一行可以显示多个</span>
+    <span>宽度和高度 默认 由内容撑开</span>
+    <span>不可以设置 宽 高</span>
+
+    <!-- 3.行内块 -->
+    <!-- input textarea button select img ... -->
+    <!-- 一行显示多个，可以加宽高 -->
+    <img src="./100.jpg" alt="小宝宝" width="100px">
+    <hr>
+
+
+    <!-- 4.显示模式转换 display -->
+    <span class="bg">不可以设置 宽 高</span>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.继承 */
+        div {
+            color: red;
+            font-style: italic;
+            font-size: 30px;
+            font-family: 楷体;
+            
+        }
+
+        /* 2.层叠 */
+        div.box {
+            /* 层叠 ：选择器优先级相同，才通过层叠性判断结果 */
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1.继承 -->
+    <!-- 只有 文字 控制的属性 可以继承 -->
+    <!-- inherited from div  继承于div -->
+    <!-- 工作中处理 body 来使用继承 -->
+    <div>
+        <span>这是div里面的span</span>
+        <!-- 超链接例外，不继承颜色(自己有原生颜色) -->
+        <a href="">我是超链接</a>
+        <!-- 标题例外，不继承尺寸(自己有原生尺寸) -->
+        <h1>一级标题</h1>
+    </div>
+    <hr>
+
+
+    <!-- 2.层叠 -->
+    <!-- 选择器优先级相同，才通过层叠性判断结果 -->
+    <div class="box">层叠验证</div>
+
+    
+
+
+</body>
+</html>
