@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        /* 1.结构伪类 - 选中第一个 */
+        li:first-child {
+            background-color: pink;
+        }
+
+        /* 2.结构伪类 - 选中最后一个 */
+        li:last-child {
+            background-color: red;
+        }
+
+         /* 3.结构伪类 - 选中任意一个(第4个) */
+         li:nth-child(4){
+            background-color: aquamarine;
+         }
+         
+         /* 4.结构伪类 - 选中偶数 2n、even */
+         .two li:nth-child(2n) {
+            background-color: green;
+         }
+
+
+         /* 5.结构伪类 - 选中奇数  2n+1、2n-1、odd */
+         .two li:nth-child(2n+1) {
+            background-color: rgb(89, 19, 219);
+         }
+
+         /* 6.结构伪类 - 选中前5个  -n+5 */
+         .two li:nth-child(-n+5) {
+            background-color: rgb(219, 149, 19);
+         }
+
+
+         /* 7.结构伪类 - 从第5个往后  n+5 */
+         .two li:nth-child(n+5) {
+            background-color: rgb(219, 19, 152);
+         }
+
+         /* 7.结构伪类 - 从第4个、第8个（四的倍数） 4n*/
+         .two li:nth-child(4n) {
+            background-color: rgb(19, 156, 219);
+         }
+
+    </style>
+</head>
+<body>
+    <!-- 1.根据结构关系找元素 -->
+    <!--选择器： 
+        E：first-child{}        匹配E元素的父元素中 第一个子元素，并且是E元素
+        E：last-child{}         匹配E元素的父元素中 最后一个子元素，并且是E元素
+        E：nth-child{}          匹配E元素的父元素中 第n个子元素，并且是E元素
+        E：nth-last-child{}     匹配E元素的父元素中 倒数第n个子元素，并且是E元素
+     -->
+
+     <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+     </ul>
+     <hr>
+
+     <ul class="two">
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+     </ul>
+
+
+    
+</body>
+</html>
