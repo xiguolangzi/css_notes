@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        /* 1.背景颜色 */
+        div{
+            /* rgba:红 绿 蓝 透明度 */
+            background-color: rgba(15, 175, 28, 0.5);
+        }
+
+        /* 2.背景图片 */
+        div.box {
+            width: 400px;
+            height: 400px;
+            color: aquamarine;
+
+            /* 2.1背景图片引用 background-image */
+            background-image: url(./平铺.png);
+
+            /* 2.2背景平铺 background-repeat */
+            /* 
+            repeat: 水平和垂直方向都平铺（默认值）
+            no-repeat: 不平铺
+            repeat-x:x轴平铺
+            repeat-y:y轴平铺
+            */
+            background-repeat: no-repeat;
+
+            /* 2.3背景图位置 background-position */
+            /* background-position: 水平 垂直 */
+            /* 0 0    right 0   right bottom   center  */
+            /* 像素 正往正方向偏移  负往反方向偏移 */
+            background-position: 50px center;
+
+            
+
+
+        }
+
+
+        /* 3.背景相关属性的连写方式 */
+        div.box2 {
+            /* 推荐：background： color image repeat position */
+            width: 400px;
+            height: 400px;
+            background: pink url(平铺.png) no-repeat 100px 50px;
+
+        }
+
+        /* 4.背景原则 */
+        /* 重要的用 img, 不重要的用背景图片 */
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div>div</div>
+    <hr>
+    <div class="box">divbox</div>
+    <hr>
+    <div class="box2">哈哈</div>
+    
+</body>
+</html>

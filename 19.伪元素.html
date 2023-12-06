@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weiyuans</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        /* 伪类元素 : 默认行内元素 */
+        .father::before {
+            /* 添加内容 */
+            content: "老鼠";
+            /* 添加属性 */
+            color: green;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            line-height: 100px;
+
+            /* 默认行内元素，转行内块 */
+            display: inline-block;
+        }
+        .father::after {
+            content: "大米";
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 伪元素：CSS创建出来的装饰性标签，默认行内元素 -->
+    <!--伪元素 
+        ：：before      在父级元素内 最前面 添加一个伪元素
+        ：：after       在父级元素内 最后面 添加一个伪元素
+        ！！必须设置 content 属性才能生效！！
+
+     -->
+
+     <div class="father">爱</div>
+        <!-- 添加一个"老鼠" 爱 "大米"-->
+ 
+
+     
+    
+</body>
+</html>

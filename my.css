@@ -1,0 +1,71 @@
+/* 1.标签选择器 */
+p{
+    color: red;
+    /* 后面覆盖前面 */
+    color: rgb(255, 127, 176);
+}
+
+/* 2.类选择器 
+    类名：必须有 数字、字母、下划线 组成，数字或下划线不能开头
+    一个标签可以有多个类名，类属性值之间空格隔开 class = "color font_size"
+    可以重复
+*/
+.color_green{
+    color: rgb(0, 255, 64);
+}
+
+.font_size{
+    font-size: 30px;
+}
+
+/* 3.id选择器
+    不用于美华，只用于配合js使用
+    不可以重复，页面中唯一存在
+*/
+#coloe_blue{
+    color: blue;
+}
+
+/* 4.通配符选择器 
+    用于 清除 默认的样式(外边距)
+    通配符样式 优先级最低
+*/
+*{
+    color: blueviolet;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+/* 浏览器 默认字体大小 = 16px */
+/* 
+    文字加粗 font_weight
+        常规：400 normal
+        加粗：700 italic
+*/
+/* 
+    文字倾斜 font-style:
+        常规：normal
+        倾斜：italic
+*/
+/* 
+    字体 font-family:
+        默认: 微软雅黑
+        网页更喜欢: 微软雅黑 Arial
+        等宽字体: Consolas、fira code
+
+*/
+.font_weight{
+    font-weight: 700;
+    font-style: italic;
+    /* 如果电脑没有某些字体，按顺序一次选取， 最后选取 无衬线字体sans-serif 系列显示 */
+    font-family: 楷体,黑体,sans-serif;
+}
+
+/* 
+    font 复合属性: 
+        font : style  weight size  family 
+*/
+.font{
+    font: italic 700 66px 宋体;
+}

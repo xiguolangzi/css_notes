@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* 1.合并现象：上下块级 */
+        /* 垂直布局 的 块级元素，上下的 margin 会合并 */
+        /* 最终两者距离为 margin 的最大值  */
+        /* 为了避免，解决办法 只给一个块 设置 margin 即可  */
+        
+        .one {
+            margin-bottom: 60px;
+        }
+
+        .two {
+            margin-top: 50px;
+        }
+
+        /* 2.塌陷问题 ：块级嵌套*/
+        /* 坑爹现象：子级设置margin 影响 父级 */
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+
+            /* 解决塌陷问题 1*/
+            /* padding-top: 50px; */
+            /* 解决塌陷问题2 */
+            /* border-top: 50px; */
+            /* 解决塌陷问题3  最完美的解决办法 */
+            overflow: hidden;
+            /* 解决塌陷问题4 */
+            /* 转换成行内块元素 */
+            /* 解决塌陷问题5 */
+            /* 设置浮动 */
+
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            /* 产生塌陷问题 */
+            margin-top: 50px;
+
+        }
+
+        /* 3.行内元素  内外边距 margin或padding 不生效 */
+        span {
+            /* margin 只改变 左右，改变不了上下 */
+            margin: 100px;
+            /* padding 只改变 左右，改变不了上下 */
+            padding: 100px;
+            /* 只能通过行高 改变上下间距 */
+            line-height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1.块级 合并现象 -->
+    <div class="one">11</div>
+    <div class="two">22</div>
+    <hr>
+
+    <!-- 2.块级 嵌套塌陷问题 -->
+    <div class="father">
+        <div class="son">son</div>
+    </div>
+    <hr>
+
+    <!-- 3.行内标签 内、外边距 无法改变 上下间距 问题 -->
+    <span>span1</span>
+    <span>span2</span>
+
+
+</body>
+</html>

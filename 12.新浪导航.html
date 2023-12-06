@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.先处理盒子 */
+        div {
+            height: 40px;
+
+            background-color: #fff;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+
+        }
+
+        /* 2.处理标签 */
+        .box a {
+            /* 处理文本 */
+            width: 80px;
+            height: 40px;
+
+           /* 切换成行内块 */
+            display: inline-block;
+
+            /* 调整文本位置 */
+            text-align: center;
+            line-height: 40px;
+
+            /* 处理字体 */
+            text-decoration: none;
+            font-size: 12px;
+            color: #4c4c4c;  
+        }
+
+        /* 3.悬浮处理 */
+        .box a:hover{
+            background-color: #edeef0;
+            color: #ff4800;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 从上到下，从外到内 -->
+    <div class="box">
+        <a href="#" >新浪导航</a>
+        <a href="#" >新浪导航</a>
+        <a href="#" >新浪导航</a>
+        <a href="#" >新浪导航</a>
+    </div>
+    
+</body>
+</html>

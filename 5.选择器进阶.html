@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器进阶</title>
+    <style>
+        /* 1.后代选择器：找到div 儿子 p标签 文字颜色红色 */
+        /* 父选择器 后代选择器(选中所有后代) {} */
+        div p {
+            /* 选中div 里面的所有p 包括儿子 孙子 ... */
+            color: red;
+        }
+
+        /* 2.子代选择器：只选中所有下级儿子  */
+        div > a {
+            /* 只选中 div 的 儿子 */
+            color: blue;
+        }
+
+        /* 3.并集选择器：选择器1，选择器2 ，...{} */
+        /* 建议每个选择器，后换行 */
+        h1, h2 {
+            color: blueviolet;
+        }
+
+        /* 4.交集选择器： p.类名 { }  */
+        /* 找到 第一个 类是box 的 p标签，颜色为绿色 */
+        h4.box {
+            color: green;
+        }
+
+        /* 5.伪类选择器：标签名：hover { } */
+        /* 悬停的时候文字是红色，添加背景色 */
+        /* 任何标签都支持 伪类选择器 设置 背景色 */
+        a:hover {
+            color: red;
+            background-color: aquamarine;
+        }
+
+
+        /* 6.emmet语法：简写语法，快速生成代码 */
+        /* 使用单词首字母进行过滤关键字 */
+        a.box {
+            /* fsz */
+            font-size: 20px;
+            /* 宽度300 高度200 背景色粉色 */
+            /* w300+h200+bgc */
+            width: 300px;
+            height: 200px;
+            background-color: rgb(230, 157, 157);
+        }
+
+        a {
+            /* 去掉下划线 */
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            /* 转成行内块 */
+            display: inline-block;
+            background-color:red;
+            color: rgb(34, 12, 236);
+            /* 文字水平居中 */
+            text-align: center;
+            /* 文本行高 */
+            line-height: 50px;
+            background-image: url(./平铺.png);
+        }
+        
+        a:hover {
+            background-color: orange;
+        }
+        
+        
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 1.后代选择器 ： 儿子 孙子 ... -->
+    <p>这是一个p标签</p>
+    <div>
+        <p>这是div儿子p标签</p>
+    </div>
+    <hr>
+
+    <!-- 2.子代选择器： -->
+    <div>
+        <a href="">这是div中的a标签</a>
+        <p>
+            <a href="">这是div中p标签中的a标签</a>
+        </p>
+    </div>
+    <hr>
+
+    <!-- 3.并集选择器: -->
+    <h2>h2h2h2</h2>
+    <h1>h1h1h1</h1>
+    <h3>h3h3h3</h3>
+    <hr>
+
+    <!-- 4.交集选择器: 找到第一个类是box的p标签，颜色为绿色 -->
+    <h4 class="box">h4h4</h4>
+    <h5>h5h5</h5>
+    <div class="box">divdiv</div>
+    <hr>
+
+    <!-- 5.伪类选择器：悬停的时候文字是红色,添加背景色 -->
+    <a href="#">这是超链接</a>
+    <hr>
+
+    <!-- 6.emmet语法: 简写语法，快速生成代码 -->
+    <!-- div -->
+    <div></div>
+    <!-- h1 -->
+    <h1></h1>
+    <!--  .box -->
+    <div class="box"></div>
+    <!--  #box -->
+    <div id="box"></div>
+    <!-- p.box -->
+    <p class="box"></p>
+    <!-- p.box#one -->
+    <p class="box" id="one"></p>
+    <!-- div+p -->
+    <div></div>
+    <p></p>
+    <!-- div>p -->
+    <div>
+        <p></p>
+    </div>
+    <!-- ul>li*3 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- ul>li{111}*3 -->
+    <ul>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+    </ul>
+    <!-- ul>li{$}*3 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <hr>
+    <!-- a{导航$}*5 -->
+    <!-- alt + shift 多选 -->
+    <a href="#">导航2</a>
+    <a href="#">导航3</a>
+    <a href="#">导航4</a>
+    <a href="#">导航1</a>
+    <a href="#">导航5</a>
+
+
+</body>
+</html>

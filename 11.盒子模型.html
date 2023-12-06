@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div {
+            /* 1.内容 */
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+
+            /* 2.边框 */
+            /* border-left 可以单独设置 上下左右*/
+            /* solid 实线，最多用虚线，其他类型的线不考虑 */
+            border: 1px solid #000;
+
+            /* 3.内边距 */
+            /* padding : 20px  四边内边距一样20 */
+            /* padding: 20px 10px 30px 40px 四边顺序 上20 右10 下30 左40*/
+            /* padding: 20px 40px  上下20  右左40   */
+            padding: 20px 10px 30px 40px;
+
+            /* 3.1内减模式 box-sizing: border-box */
+            /* 自动调整 内边距和边框 不用做减法 */
+            box-sizing: border-box;
+
+            /* 4.外边距 */
+            /* margin-left 左边距 */
+            /* margin: 20px 10px 30px 40px 四边顺序 上20 右10 下30 左40*/
+            margin: 50px; 
+            
+        }
+
+        /* 5.清除默认的 内、外 边距 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>盒子模型组成</h1>
+    <ul>
+        <li>内容</li>
+        <li>内边距  padding </li>
+        <li>边框    border </li>
+        <li>外边距  margin </li>
+    </ul>
+
+    <!-- 盒子 -->
+    <div>内容电脑1</div>
+    <div>内容电脑2</div>
+
+</body>
+</html>

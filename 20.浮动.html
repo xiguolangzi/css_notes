@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+
+            /* 1.转行内块 实现块级同一行，但是换行会有间距 */
+            /* display: inline-block; */
+        }
+
+        .one {
+            background-color: pink;
+            /* 2. 浮动 */
+            float: left;
+
+            /* 2.0 浮动不能通过margin居中 浮动优先 */
+            margin: 0 auto;
+            
+            
+        }
+
+        .two {
+            background-color: rgb(18, 216, 123,0.7);
+            float: left;
+
+            /* 2.1 浮动顶对齐 */
+            /* 2.2 浮动 后的标签 具备行内块特点(可以设置宽高) */
+            /* 2.3 浮动 找 浮动 */
+            width: 200px;
+            height: 200px;
+
+        }
+
+        /* 3. 浮动 脱离标准流的控制，不在标准流中占位置 */
+        .tree {
+            background-color: rgb(89, 26, 207);
+            /* float: left; */
+
+            width: 300px;
+            height: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 1.普通默认的排版方式：标准流(文档流) -->
+
+    <!-- 2.浮动 -->
+    <!-- 
+        作用：让块级标签完美的布局在同一行
+        写法：float: left
+
+     -->
+
+     <div class="one">one</div>
+     <div class="two">two</div>
+
+     <!-- 3.浮动 脱离标准流的控制，不在标准流中占位置 -->
+
+     <div class="tree">tree</div>
+
+
+</body>
+</html>

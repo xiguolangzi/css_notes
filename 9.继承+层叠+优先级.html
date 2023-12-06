@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.继承 */
+        div {
+            color: red;
+            font-style: italic;
+            font-size: 30px;
+            /* !important 优先级最高 */
+            font-family: 楷体 !important;
+            
+            
+        }
+
+        /* 2.层叠 */
+        div.box {
+            /* 层叠 ：选择器优先级相同，才通过层叠性判断结果 */
+            color: blueviolet;
+            font-family: 黑体;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1.继承 -->
+    <!-- 只有 文字 控制的属性 可以继承 -->
+    <!-- inherited from div  继承于div -->
+    <!-- 工作中处理 body 来使用继承 -->
+    <div>
+        <span>这是div里面的span</span>
+        <!-- 超链接例外，不继承颜色(自己有原生颜色) -->
+        <a href="">我是超链接</a>
+        <!-- 标题例外，不继承尺寸(自己有原生尺寸) -->
+        <h1>一级标题</h1>
+    </div>
+    <hr>
+
+
+    <!-- 2.层叠 -->
+    <!-- 覆盖 + 叠加 -->
+    <!-- 选择器优先级相同，才通过层叠性判断结果 -->
+    <div class="box">层叠验证</div>
+
+
+    <!-- 3.优先级 -->
+    <!-- 选中范围越广 优先级 越低 -->
+    <!-- 继承 < 通配符选择器 < 标签选择器 < 类选择器 < id选择器 < 行内样式 < !important -->
+    <!-- !important 加在CSS中 属性之后面，双引号之前 -->
+    <!-- 开发中不建议使用 !important -->
+
+
+    <!-- 4.权重叠加计算 -->
+    <!-- 复合选择器中： 行内样式的个数 > id选择器的个数 > 类选择器的个数 > 标签选择器的个数 -->
+    <!-- 
+        叠加计算：（0,1,0,1）       优先级：1
+        div #one {
+            color: red
+        }
+
+        叠加计算：（0,0,2,0）       优先级：2
+        .father .son {
+            color:skyblue
+        }
+
+        叠加计算：（0,0,1,1）       优先级：3
+        .father p {
+            color:purple
+        }
+
+        叠加计算：（0,0,0,2）       优先级：4
+        div p {
+            color:pink
+        }
+
+     -->
+
+
+    
+
+
+</body>
+</html>
